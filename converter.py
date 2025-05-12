@@ -10,6 +10,10 @@ print("6. convert days to hours\n")
 print("7. convert kilometers to miles")
 print("8. convert miles to kilometers\n")
 
+print("9. convert celsius to fahrenheit")
+print("10. convert fahrenheit to celsius\n")
+
+
 conversion_choice = input('choose an action (or type "exit" to quit): ')
 
 while conversion_choice != "exit":
@@ -52,6 +56,16 @@ while conversion_choice != "exit":
         miles = float(input("enter miles: "))
         result = miles * 1.60934
         print(f"{miles} miles are {round(result, 2)} kilometers")
+
+    elif conversion_choice == "9":
+        celsius = float(input("enter celsius: "))
+        result = 9 / 5 * celsius + 32
+        print(f"{celsius} celsius are {round(result, 2)} fahrenheit")
+
+    elif conversion_choice == "10":
+        fahrenheit = float(input("enter fahrenheit: "))
+        result = 5 / 9 * (fahrenheit - 32)
+        print(f"{fahrenheit} fahrenheit are {round(result, 2)} celsius")
 
     else:
         print("invalid choice")
